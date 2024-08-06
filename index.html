@@ -58,7 +58,7 @@
         <main>
             <section id="home" class="hero">
                 <h1 class="animate__animated animate__fadeIn">Welcome to <span class="server-brand">OhDeer.VIP</span></h1>
-                <p class="animate__animated animate__fadeIn">Welcome to OhDeer, enjoy your time!</p>
+                <p class="animate__animated animate__fadeIn">enjoy your time!</p>
             </section>
 <script src="js/bootstrap.bundle.min.js"></script>
 
@@ -255,6 +255,15 @@
                 </div>
             </div>
         </div>
+    <script>
+        function copyToClipboard() {
+            var copyText = document.getElementById("connectInput");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); // For mobile devices
+            document.execCommand("copy");
+            alert("Copied the text: " + copyText.value);
+        }
+    </script>
     <div class="modal fade modal-rust" id="server0" tabindex="-1" style="display: none;" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -321,7 +330,7 @@ VIP now available at <a href="https://Store.ohdeer.vip" target="_blank">Store.oh
                             <span class="server-description">
                             6000 Map Size!                                                                    - 0/100                                                         </span>
                             <div class="server-rules">How to connect?<br> <ol> <li>You need to copy the ID out of the Box with the command.</li><li> Then you start your game and press F1 to open the console.</li><li> You paste the ID into your console and then press enter.</li></ol> <br>
-                                <input type="text" class="connect-input" readonly="" value="connect us2x.ohdeer.vip">
+                                <input type="text" class="connect-input2" readonly="" value="connect us2x.ohdeer.vip">
                             </div>
                         </div>
                     </div>
