@@ -1,3 +1,4 @@
+
 <html lang="en"><head>
 	<meta charset="utf-8">
 	<title>OhDeer.Vip</title>
@@ -59,6 +60,7 @@
                 <h1 class="animate__animated animate__fadeIn">Welcome to <span class="server-brand">OhDeer.VIP</span></h1>
                 <p class="animate__animated animate__fadeIn">Welcome to OhDeer, enjoy your time!</p>
             </section>
+<script src="js/bootstrap.bundle.min.js"></script>
 
             <section id="servers" class="servers">
                 <div class="row justify-content-center">
@@ -74,8 +76,22 @@
                                     <div class="server-tags">
                                                                             </div>
                                                                             <span class="server-players">
-                                            this is broken / 50  players
+                                            Loading...
                                             </span>
+											 <script>
+        fetch('https://api.battlemetrics.com/servers/28409822?include=identifier')
+          .then(res => res.json())
+          .then(data => {
+            const players = data.data.attributes.players;
+            console.log(players);
+
+            // Displaying the players in the span element
+            document.querySelector('.server-players').textContent = `${players} / 50 players`;
+          })
+          .catch(error => {
+            console.error('Error:', error);
+          });
+    </script>
                                         <div class="progress">
                                             <div class="progress-bar bg-rust" role="progressbar" aria-label="Amount of players" aria-valuemin="5" aria-valuemax="100" style="width: 2%"></div>
                                         </div>
@@ -114,10 +130,25 @@
                                     <span class="server-name">US OhDeer 2x | BiWeekly | 8 Max | Large Map</span>
                                     <span class="server-description">Discord.ohdeer.vip</span>
                                     <div class="server-tags">
-                                                                            </div>
-                                                                            <span class="server-players">
-                                            this is broken / 100  players
+                                    </div>
+                                    <span class="servers-players">
+                                            Loading
                                             </span>
+											 <script>
+        fetch('https://api.battlemetrics.com/servers/28597868?include=identifier')
+          .then(res => res.json())
+          .then(data => {
+            const players = data.data.attributes.players;
+            console.log(players);
+
+            // Displaying the players in the span element
+            document.querySelector('.servers-players').textContent = `${players} / 100 players`;
+          })
+          .catch(error => {
+            console.error('Error:', error);
+          });
+    </script>
+
                                         <div class="progress">
                                             <div class="progress-bar bg-rust" role="progressbar" aria-label="Amount of players" aria-valuemin="5" aria-valuemax="100" style="width: 2%"></div>
                                         </div>
@@ -374,7 +405,7 @@ Server Info<br>
 	</div>
 </footer>
 
-<script src="js/bootstrap.bundle.min.js"></script>
+
 <script src="js/linkify.min.js"></script>
 <script src="js/linkify-element.min.js"></script>
 <script src="js/axios.min.js"></script>
