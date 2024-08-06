@@ -248,7 +248,7 @@
                             <span class="server-description">
                             Discord.OhDeer.vip                                                                    - 0/50                                                         </span>
                             <div class="server-rules">How to connect?<br> <ol> <li>You need to copy the ID out of the Box with the command.</li><li> Then you start your game and press F1 to open the console.</li><li> You paste the ID into your console and then press enter.</li></ol> <br>
-                                <input type="text" class="connect-input" readonly="" value="connect us.ohdeer.vip">
+                                <span class="connect-input">connect us.ohdeer.vip"<\span>
                             </div>
                         </div>
                     </div>
@@ -257,7 +257,7 @@
         </div>
     <script>
         function copyToClipboard() {
-            var copyText = document.getElementById("connectInput");
+            var copyText = document.getElementById("connect-input");
             copyText.select();
             copyText.setSelectionRange(0, 99999); // For mobile devices
             document.execCommand("copy");
