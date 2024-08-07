@@ -234,7 +234,11 @@
 	        
         </main>
     </div>
-
+    <style>
+        .connect-input {
+            cursor: pointer;
+        }
+    </style>
             <div class="modal fade modal-rust" id="button0" tabindex="-1" style="display: none;" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -257,7 +261,7 @@
         </div>
     <script>
         function copyToClipboard() {
-            var copyText = document.getElementById("connectinput");
+            var copyText = document.getElementById("connectInput");
             copyText.select();
             copyText.setSelectionRange(0, 99999); // For mobile devices
             document.execCommand("copy");
