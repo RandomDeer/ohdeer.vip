@@ -75,37 +75,14 @@
                                     <span class="server-description">Loading...</span>
                                     <div class="server-tags">
                                                                             </div>
-                                                                            <span class="server-players">
+                                                                            <span class="server-players3">
                                             Loading...
                                             </span>
-											 <script>
-var players;
-        fetch('https://api.battlemetrics.com/servers/28409822?include=identifier')
-          .then(res => res.json())
-          .then(data => {
-            players = data.data.attributes.players;
-            console.log(players);
-
-            // Displaying the players in the span element
-            document.querySelector('.server-players').textContent = `${players} / 50 players`;
-	    document.querySelector('.server-description').textContent = `Discord.ohdeer.vip - ${players}/50`
-	    document.querySelector('.server-description3').textContent = `Discord.ohdeer.vip - ${players}/50`
-          })
-          .catch(error => {
-            console.error('Error:', error);
-          });
-    </script>
+											 
                                         <div class="progress">
-                                            <div class="progress-bar bg-rust" role="progress-bar" aria-label="Amount of players" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                                            <div class="progress-bar bg-rust a" role="progress-bar" aria-label="Amount of players" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
                                         </div>
-<script>
-    var currentPlayers = {players}; // Replace this with the actual current number of players
-    var maxPlayers = 50;
 
-    var currentPercentage = (currentPlayers / maxPlayers) * 100;
-
-    document.getElementById("progress-bar").style="width: ${currentPercentage}%";
-</script>
 
 
                                     	                                                                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#button0">
@@ -141,29 +118,16 @@ var players;
                                 </div>
                                 <div class="server-container">
                                     <span class="server-name">US OhDeer 2x | BiWeekly | 8 Max | Large Map</span>
-                                    <span class="server-description2">Discord.ohdeer.vip</span>
+                                    <span class="server-description1">Discord.ohdeer.vip</span>
                                     <div class="server-tags">
                                     </div>
                                     <span class="servers-players">
                                             Loading
                                             </span>
-											 <script>
-        fetch('https://api.battlemetrics.com/servers/28597868?include=identifier')
-          .then(res => res.json())
-          .then(data => {
-            const players = data.data.attributes.players;
-            console.log(players);
-
-            // Displaying the players in the span element
-            document.querySelector('.servers-players').textContent = `${players} / 100 players`;
-          })
-          .catch(error => {
-            console.error('Error:', error);
-          });
-    </script>
+											 
 
                                         <div class="progress">
-                                            <div class="progress-bar bg-rust" role="progressbar" aria-label="Amount of players" aria-valuemin="5" aria-valuemax="100" style="width: 2%"></div>
+                                            <div class="progress-bar bg-rust b" role="progress-bar" aria-label="Amount of players" aria-valuemin="5" aria-valuemax="100" style="width: 2%"></div>
                                         </div>
                                     	                                                                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#button1">
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -359,7 +323,7 @@ VIP now available at <a href="https://Store.ohdeer.vip" target="_blank">Store.oh
                         </div>
                         <div class="server-modal-details">
                             <span class="server-name">US OhDeer 2x | BiWeekly | 8 Max | Large Map</span>
-                            <span class="server-description">
+                            <span class="server-description1">
                             6000 Map Size!                                                                    - 0/100                                                         </span>
                             <div class="server-rules">How to connect?<br> <ol> <li>You need to copy the ID out of the Box with the command.</li><li> Then you start your game and press F1 to open the console.</li><li> You paste the ID into your console and then press enter.</li></ol> <br>
                                 <input type="text" class="connect-input2" readonly="" value="connect us2x.ohdeer.vip">
@@ -379,7 +343,7 @@ VIP now available at <a href="https://Store.ohdeer.vip" target="_blank">Store.oh
                     </div>
                     <div class="server-modal-details">
                         <span class="server-name">US OhDeer 2x | BiWeekly | 8 Max | Large Map</span>
-                        <span class="server-description">
+                        <span class="server-description1">
                             6000 Map Size	                                                        - 0/100                                                     </span>
                         <span class="server-rules">Welcome to OhDeer's Vanilla 2x<br>
 6000 Map Size!<br>
@@ -426,9 +390,45 @@ Server Info<br>
             
     
             
-    
+    <script>
+var players;
+var currentPlayers;
+var currentPercentage;
+        fetch('https://api.battlemetrics.com/servers/28409822?include=identifier')
+          .then(res => res.json())
+          .then(data => {
+            players = data.data.attributes.players;
+			currentPlayers = players;
+            console.log(players);
+			currentPercentage = (`${currentPlayers}` / 50) * 100;
+            // Displaying the players in the span element
+			document.querySelector('div.progress-bar.bg-rust.a').style=`width: ${currentPercentage}%`;
+            document.querySelector('.server-players3').textContent = `${players} / 50 players`;
+	    document.querySelector('.server-description3').textContent = `Discord.ohdeer.vip - ${players}/50`
+	    document.querySelector('.server-description3').textContent = `Discord.ohdeer.vip - ${players}/50`
+          })
+          .catch(error => {
+            console.error('Error:', error);
+          });
+    </script>
             
-    
+<script>
+        fetch('https://api.battlemetrics.com/servers/28597868?include=identifier')
+          .then(res => res.json())
+          .then(data => {
+            players = data.data.attributes.players;
+            console.log(players);
+
+            // Displaying the players in the span element
+            document.querySelector('.servers-players').textContent = `${players} / 100 players`;
+			document.querySelector('.server-description1').textContent = `Discord.ohdeer.vip - ${players}/100`
+			document.querySelector('div.progress-bar.bg-rust.b').style=`width: ${players}%`;
+			
+          })
+          .catch(error => {
+            console.error('Error:', error);
+          });
+    </script>
             
     
     
@@ -450,4 +450,3 @@ Server Info<br>
 <script src="js/linkify.min.js"></script>
 <script src="js/linkify-element.min.js"></script>
 <script src="js/axios.min.js"></script>
-
