@@ -79,10 +79,11 @@
                                             Loading...
                                             </span>
 											 <script>
+var players;
         fetch('https://api.battlemetrics.com/servers/28409822?include=identifier')
           .then(res => res.json())
           .then(data => {
-            const players = data.data.attributes.players;
+            players = data.data.attributes.players;
             console.log(players);
 
             // Displaying the players in the span element
