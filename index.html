@@ -95,8 +95,18 @@
           });
     </script>
                                         <div class="progress">
-                                            <div class="progress-bar bg-rust" role="progressbar" aria-label="Amount of players" aria-valuemin="0" aria-valuemax="100" style="width: 2%"></div>
+                                            <div class="progress-bar bg-rust" role="progress-bar" aria-label="Amount of players" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
                                         </div>
+<script>
+    var currentPlayers = players; // Replace this with the actual current number of players
+    var maxPlayers = 50;
+
+    var currentPercentage = (currentPlayers / maxPlayers) * 100;
+
+    document.getElementById("progress-bar").style.width = currentPercentage + '%';
+</script>
+
+
                                     	                                                                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#button0">
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                                     <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
