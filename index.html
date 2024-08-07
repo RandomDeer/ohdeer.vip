@@ -88,14 +88,14 @@
             // Displaying the players in the span element
             document.querySelector('.server-players').textContent = `${players} / 50 players`;
 	    document.querySelector('.server-description').textContent =`
-                            Discord.ohdeer.vip	                                                        - ${players}/50                                                     `
+                            Discord.ohdeer.vip	                                                        - ${players}/50`
           })
           .catch(error => {
             console.error('Error:', error);
           });
     </script>
                                         <div class="progress">
-                                            <div class="progress-bar bg-rust" role="progressbar" aria-label="Amount of players" aria-valuemin="5" aria-valuemax="100" style="width: 2%"></div>
+                                            <div class="progress-bar bg-rust" role="progressbar" aria-label="Amount of players" aria-valuemin="0" aria-valuemax="100" style="width: 2%"></div>
                                         </div>
                                     	                                                                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#button0">
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
