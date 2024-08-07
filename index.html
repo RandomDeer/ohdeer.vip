@@ -87,6 +87,8 @@
 
             // Displaying the players in the span element
             document.querySelector('.server-players').textContent = `${players} / 50 players`;
+	    document.querySelector('.server-description').textContent =`
+                            Discord.ohdeer.vip	                                                        - ${players} / 50                                                     `
           })
           .catch(error => {
             console.error('Error:', error);
@@ -143,8 +145,6 @@
 
             // Displaying the players in the span element
             document.querySelector('.servers-players').textContent = `${players} / 100 players`;
-	    document.querySelector('.server-description').textContent =`
-                            Discord.ohdeer.vip	                                                        - ${players} / 50                                                     `
           })
           .catch(error => {
             console.error('Error:', error);
