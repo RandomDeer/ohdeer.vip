@@ -98,7 +98,7 @@
                                             <div class="progress-bar bg-rust" role="progress-bar" aria-label="Amount of players" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
                                         </div>
 <script>
-    var currentPlayers = players; // Replace this with the actual current number of players
+    var currentPlayers = {players}; // Replace this with the actual current number of players
     var maxPlayers = 50;
 
     var currentPercentage = (currentPlayers / maxPlayers) * 100;
@@ -449,22 +449,4 @@ Server Info<br>
 <script src="js/linkify.min.js"></script>
 <script src="js/linkify-element.min.js"></script>
 <script src="js/axios.min.js"></script>
-<script>
-    if(document.querySelector('.modal .server-description') !== null) {
-        document.querySelectorAll('.modal .server-rules').forEach(function(description) {
-            linkifyElement(description, { defaultProtocol: 'https', target: '_blank'}, document);
-        });
-        linkifyElement(document.querySelector('.modal .server-description'), { protocol: 'https', target: '_blank'}, document);
-    }
 
-    
-        let showOnlineDiscordMembers = async() => {
-            let discordApiRequest = await axios.get(`https://discordapp.com/api/guilds/872752260021633035/embed.json`)
-            document.querySelector('.discord-players-counter').innerText = discordApiRequest.data.presence_count;
-        }
-
-        window.addEventListener('DOMContentLoaded', () => {
-            showOnlineDiscordMembers();
-        });
-
-    </script>
