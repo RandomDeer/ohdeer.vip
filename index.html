@@ -595,7 +595,7 @@ var currentPercentage;
             // Displaying the players in the span element
             document.querySelector('.servers-players').textContent = `${players} / 100 players`;
 			document.querySelector('.server-description1').textContent = `Discord.ohdeer.vip - ${players}/100`
-			document.querySelector('div.progress-bar.bg-rust.b').style=`width: ${players}%`;
+			document.querySelector('div.progress-bar.bg-rust.b').style=`width: ${currentPercentage}%`;
 			
           })
           .catch(error => {
