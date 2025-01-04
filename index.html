@@ -477,7 +477,7 @@ var currentPercentage;
           .then(data => {
             players = data.data.attributes.players;
             console.log(players);
-
+            currentPercentage = (`${currentPlayers}` / 100) * 100;
             // Displaying the players in the span element
             document.querySelector('.servers-players').textContent = `${players} / 100 players`;
 			document.querySelector('.server-description1').textContent = `Discord.ohdeer.vip - ${players}/100`
