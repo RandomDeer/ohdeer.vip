@@ -462,7 +462,6 @@ var currentPercentage;
 			document.querySelector('div.progress-bar.bg-rust.a').style=`width: ${currentPercentage}%`;
             document.querySelector('.server-players3').textContent = `${players} / 100 players`;
 	    document.querySelector('.server-description3').textContent = `Discord.ohdeer.vip - ${players}/100`
-	    document.querySelector('div.progress-bar.bg-rust.b').style=`width: ${players}%`;
           })
           .catch(error => {
             console.error('Error:', error);
@@ -470,6 +469,9 @@ var currentPercentage;
     </script>
             
 <script>
+var players;
+var currentPlayers;
+var currentPercentage;
         fetch('https://api.battlemetrics.com/servers/31167977?include=identifier')
           .then(res => res.json())
           .then(data => {
