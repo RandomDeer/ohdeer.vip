@@ -438,10 +438,9 @@ var currentPercentage;
             console.log(players);
 			currentPercentage = (`${currentPlayers}` / 100) * 100;
             // Displaying the players in the span element
-			document.querySelector('div.progress-bar.bg-rust.a').style=`width: ${currentPercentage}%`;
             document.querySelector('.server-players4').textContent = `${players} / 100 players`;
 	    document.querySelector('.server-description4').textContent = `Discord.ohdeer.vip - ${players}/100`
-	    document.querySelector('.server-description4').textContent = `Discord.ohdeer.vip - ${players}/100`
+	    document.querySelector('div.progress-bar.bg-rust.c').style=`width: ${players}%`;
           })
           .catch(error => {
             console.error('Error:', error);
