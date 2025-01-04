@@ -274,15 +274,15 @@ VIP now available at <a href="https://Store.ohdeer.vip" target="_blank">Store.oh
  - Change door codes<br>
 </span>
 <script>
-        fetch('https://api.battlemetrics.com/servers/28409822?include=identifier')
+        fetch('https://api.battlemetrics.com/servers/31126767?include=identifier')
           .then(res => res.json())
           .then(data => {
             const players = data.data.attributes.players;
             console.log(players);
 
             // Displaying the players in the span element
-	    document.querySelector('.server-description').textContent = `Discord.ohdeer.vip - ${players}/50`
-	    document.querySelector('.server-description3').textContent = `Discord.ohdeer.vip - ${players}/50`
+	    document.querySelector('.server-description').textContent = `Discord.ohdeer.vip - ${players}/100`
+	    document.querySelector('.server-description3').textContent = `Discord.ohdeer.vip - ${players}/100`
           })
           .catch(error => {
             console.error('Error:', error);
@@ -291,7 +291,7 @@ VIP now available at <a href="https://Store.ohdeer.vip" target="_blank">Store.oh
                     </div>
                 </div>
                 <div class="modal-footer">
-	                                    <a href="https://www.battlemetrics.com/servers/rust/28409822" target="_blank" title="BattleMetrics" class="btn btn-danger">
+	                                    <a href="https://www.battlemetrics.com/servers/rust/31126767" target="_blank" title="BattleMetrics" class="btn btn-danger">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                         </svg>
@@ -359,7 +359,7 @@ Server Info<br>
                     </div>
                 </div>
                 <div class="modal-footer">
-	                                    <a href="https://www.battlemetrics.com/servers/rust/28597868" target="_blank" title="BattleMetrics" class="btn btn-danger">
+	                                    <a href="https://www.battlemetrics.com/servers/rust/31167977" target="_blank" title="BattleMetrics" class="btn btn-danger">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                         </svg>
@@ -394,13 +394,13 @@ Server Info<br>
 var players;
 var currentPlayers;
 var currentPercentage;
-        fetch('https://api.battlemetrics.com/servers/28409822?include=identifier')
+        fetch('https://api.battlemetrics.com/servers/31126767?include=identifier')
           .then(res => res.json())
           .then(data => {
             players = data.data.attributes.players;
 			currentPlayers = players;
             console.log(players);
-			currentPercentage = (`${currentPlayers}` / 50) * 100;
+			currentPercentage = (`${currentPlayers}` / 100) * 100;
             // Displaying the players in the span element
 			document.querySelector('div.progress-bar.bg-rust.a').style=`width: ${currentPercentage}%`;
             document.querySelector('.server-players3').textContent = `${players} / 50 players`;
@@ -413,7 +413,7 @@ var currentPercentage;
     </script>
             
 <script>
-        fetch('https://api.battlemetrics.com/servers/28597868?include=identifier')
+        fetch('https://api.battlemetrics.com/servers/31167977?include=identifier')
           .then(res => res.json())
           .then(data => {
             players = data.data.attributes.players;
