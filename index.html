@@ -115,10 +115,10 @@
                                 </div>
                                 <div class="server-container">
                                     <span class="server-name">US OhDeer 10x | Maze</span>
-                                    <span class="server-description1">Discord.ohdeer.vip - 0/100</span>
+                                    <span class="server-description2">Discord.ohdeer.vip - 0/100</span>
                                     <div class="server-tags">
                                     </div>
-                                    <span class="servers-players">0 / 100 players</span>
+                                    <span class="servers-players4">0 / 100 players</span>
 											 
 
                                         <div class="progress">
@@ -426,7 +426,27 @@ Server Info<br>
             
     
             
-    
+    <script>
+var players;
+var currentPlayers;
+var currentPercentage;
+        fetch('https://api.battlemetrics.com/servers/31132491?include=identifier')
+          .then(res => res.json())
+          .then(data => {
+            players = data.data.attributes.players;
+			currentPlayers = players;
+            console.log(players);
+			currentPercentage = (`${currentPlayers}` / 100) * 100;
+            // Displaying the players in the span element
+			document.querySelector('div.progress-bar.bg-rust.a').style=`width: ${currentPercentage}%`;
+            document.querySelector('.server-players4').textContent = `${players} / 100 players`;
+	    document.querySelector('.server-description4').textContent = `Discord.ohdeer.vip - ${players}/100`
+	    document.querySelector('.server-description4').textContent = `Discord.ohdeer.vip - ${players}/100`
+          })
+          .catch(error => {
+            console.error('Error:', error);
+          });
+    </script>
             
     <script>
 var players;
@@ -443,7 +463,7 @@ var currentPercentage;
 			document.querySelector('div.progress-bar.bg-rust.a').style=`width: ${currentPercentage}%`;
             document.querySelector('.server-players3').textContent = `${players} / 100 players`;
 	    document.querySelector('.server-description3').textContent = `Discord.ohdeer.vip - ${players}/100`
-	    document.querySelector('.server-description3').textContent = `Discord.ohdeer.vip - ${players}/100`
+	    document.querySelector('div.progress-bar.bg-rust.b').style=`width: ${players}%`;
           })
           .catch(error => {
             console.error('Error:', error);
